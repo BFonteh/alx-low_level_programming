@@ -3,7 +3,8 @@
 #include <time.h>
 
 
-/* main -  function prints message based on conditions
+/**
+ * main -  function prints message based on conditions
  * Return: 0 wehen all is well
  */  
 int main(void)
@@ -18,8 +19,8 @@ if (lastdigit > 5)
 {
 printf("Last digit of %d is %d and is greater than 5\n", n, lastdigit);
 }
-if (lastdigit == 0)                  
-{                                                                            
+if (lastdigit == 0)
+{
 printf("Last digit of %d is %d and is %d\n", n, lastdigit, lastdigit);               }
 if ((lastdigit < 6) && (lastdigit != 0))
 {
