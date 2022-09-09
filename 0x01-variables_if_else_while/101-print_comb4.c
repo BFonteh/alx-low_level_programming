@@ -1,7 +1,6 @@
 #include <stdio.h>
 /**
- * Function prints combination of numbers
- * 
+ * main - function that prints combination of numbers
  * Return: Always 0 (Success/correct)
  */
 int main(void)
