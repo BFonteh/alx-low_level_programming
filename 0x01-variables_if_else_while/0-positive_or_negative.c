@@ -4,7 +4,7 @@
 /**
  * main - function prints random number with some conditions
  * Return: Returns 0 when all is well
- */ i
+ */
 int main(void)
 {
 int n;
