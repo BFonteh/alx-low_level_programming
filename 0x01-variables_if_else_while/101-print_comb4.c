@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- *  Function prints combination of numbers
+ * Function prints combination of numbers
  * 
- *  Return: Always 0 (Success/correct)
+ * Return: Always 0 (Success/correct)
  */
 int main(void)
 
