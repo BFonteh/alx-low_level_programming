@@ -1,10 +1,9 @@
 #include <stdio.h>
-/* Include the standard input/output libary */
 
 /**
-*  This function prints the possible combinations of 3 digits numbers
-*  Return: The return value is 0 when the function runs well
-*/
+ *  This function prints the possible combinations of 3 digits numbers
+ *  Return: The return value is 0 when the function runs well
+ */
 int main(void)
 {
 	int i,j,k;
@@ -17,6 +16,8 @@ int main(void)
 				putchar(i+'0');
 				putchar(j+'0');
 				putchar(k+'0');
+				if ((i==7) && (j==8) && (k==9))
+					break;
 				putchar(',');
 				putchar(' ');
 			}
