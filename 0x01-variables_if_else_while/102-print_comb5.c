@@ -18,24 +18,16 @@ int main(void)
 					{
 						continue;
 					}
+					putchar(i+'0');
+					putchar(j+'0');
+					putchar(' ');
+					putchar(k+'0');
+					putchar(l+'0');
 					if ((i==9) && (j==8) && (k==9) && (l==9))
-					{
-						putchar(i+'0');
-						putchar(j+'0');
-						putchar(' ');
-						putchar(k+'0');
-						putchar(l+'0');
-					}
-					else
-					{
-						putchar(i+'0');
-						putchar(j+'0');
-						putchar(' ');
-						putchar(k+'0');
-						putchar(l+'0');
-						putchar(',');
-						putchar(' ');
-					}
+						break;
+					putchar(',');
+					putchar(' ');
+					
 				}
 			}	
 		}
