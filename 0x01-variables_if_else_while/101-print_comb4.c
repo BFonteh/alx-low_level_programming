@@ -1,8 +1,8 @@
 #include <stdio.h>
-
 /**
- *  This function prints the possible combinations of 3 digits numbers
- *  Return: The return value is 0 when the function runs well
+ *  Function prints combination of numbers
+ * 
+ *  Return: Always 0 (Success/correct)
  */
 int main(void)
 {
