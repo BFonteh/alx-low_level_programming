@@ -1,37 +1,49 @@
 #include <stdio.h>
 /**
-* main - this function prints all the
-* possible combinations of 2 digits numbrs less than 100
-* Return: the return value of this function is 0 is all works well.
-*/
+ * main - this function prints combinations of numbers
+ * Return: 0 when all works well.
+ */
 int main(void)
-{
-	int i,j,k,l;
 
-	for (i = 0 ; i <= 9 ; i++)
+
+
+{
+	int first_nums;
+	int second_nums;
+
+
+	for (first_nums = 0; first_nums < 100 ; first_nums++)
 	{
-		for (j = 0 ; j <= 9 ; j++)
+		for (second_nums = first_nums + 1 ; second_nums < 100; second_nums++)
 		{
-			for (k = i ; k <=9 ; k++)
-			{	for (l = 0 ; l <= 9 ; l++)
-				{	if ((l <= j) && (j != 0))
-					{
-						continue;
-					}
-					putchar(i + '0');
-					putchar(j + '0');
-					putchar(' ');
-					putchar(k + '0');
-					putchar(l + '0');
-					if ((i == 9) && (j == 8) && (k == 9) && (l == 9))
-						break;
-					putchar(',');
-					putchar(' ');
-					
-				}
-			}	
+
+			putchar (first_nums / 10 + '0');
+			putchar (first_nums % 10 + '0');
+
+
+			putchar (' ');
+
+			putchar (second_nums / 10 + '0');
+			putchar (second_nums % 10 + '0');
+
+
+			if (first_nums == 98 && second_nums == 99)
+			{
+				break;
+			}
+
+
+			putchar(',');
+			putchar (' ');
+
+
 		}
+
 	}
+
 	putchar('\n');
+
+
 	return (0);
+
 }
