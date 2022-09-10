@@ -4,7 +4,7 @@
  * and then in upper case
  * Return: The function returns 0 when evrything has worked well.
  */
-int main(void) 
+int main(void)
 {
 	char c;
 
