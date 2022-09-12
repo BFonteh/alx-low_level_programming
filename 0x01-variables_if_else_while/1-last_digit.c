@@ -4,9 +4,9 @@
 
 
 /**
- * main -  function prints message based on conditions
- * Return: 0 wehen all is well
- */ 
+* main -  function prints message based on conditions
+* Return: 0 wehen all is well
+*/
 int main(void)
 {
 int n, lastdigit;
@@ -21,7 +21,8 @@ printf("Last digit of %d is %d and is greater than 5\n", n, lastdigit);
 }
 if (lastdigit == 0)
 {
-printf("Last digit of %d is %d and is %d\n", n, lastdigit, lastdigit);               }
+printf("Last digit of %d is %d and is %d\n", n, lastdigit, lastdigit);
+}
 if ((lastdigit < 6) && (lastdigit != 0))
 {
 printf("Last digit of %d is %d and is less than 6 and not 0\n", n,lastdigit);
