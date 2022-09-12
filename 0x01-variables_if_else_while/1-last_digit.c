@@ -6,7 +6,7 @@
 /**
  * main -  function prints message based on conditions
  * Return: 0 wehen all is well
- */  
+ */ 
 int main(void)
 {
 int n, lastdigit;
