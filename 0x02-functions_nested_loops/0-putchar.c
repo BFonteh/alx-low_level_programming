@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include "main.h"
 /**
  * main - This functions priints putchar
  * Return: Returns 0 when  all works well
