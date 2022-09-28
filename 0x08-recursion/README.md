@@ -1,1 +1,1 @@
-This directory contains codes on recursion in c
+This directory contain exercises on C programming
