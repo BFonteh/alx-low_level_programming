@@ -1,74 +1,51 @@
-#include "main.h"
-#include <stdio.h>
+#include "holberton.h"
 
 /**
- * wildcmp - check the code for Holberton School students.
- * @s1: string
- * @s2: string
- * Return: Always 0.
+ * last_index - returns the last index of a string (counts the null char)
+ * @s: pointer the string
+ * Return: int
  */
 
-int wildcmp(char *s1, char *s2)
+int last_index(char *s)
 {
-return (checker(s1, s2, 0, 0, -1));
+int n = 0;
+
+if (*s > '\0')
+	n += last_index(s + 1) + 1;
+
+return (n);
 }
 
 /**
- * checker - helper
- * @s1: string
- * @s2: string
- * @a: int
- * @b: int
- * @wildUsed: int
- * Return: Always 0.
+ * is_palindrome - check if a string is a palindrome
+ * @s: string to check
+ * Return: 0 or 1
  */
-int checker(char *s1, char *s2, int a, int b, int wildUsed)
+
+int is_palindrome(char *s)
+{
+int end = last_index(s);
+
+return (check(s, 0, end - 1, end % 2));
+}
+
+/**
+ * check - checker for the palindrome
+ * @s: string
+ * @start: int moves from right to left
+ * @end: int moves from left to right
+ * @pair: int
+ * Return: 0 or 1
+ */
+
+
+int check(char *s, int start, int end, int pair)
 {
 
-//printf("s1 <%c> a <%i> s2 <%c> b <%i> \n", s1[a], a, s2[b], b);
-
-if (s1[a] != '\0')
-{	
-	if (s2[b] == '\0')
-		return (0);
-	else if (s2[b] == '*')
-	{
-		if (s2[b + 1] == '*'){
-			//printf("Pass 1\n");
-			return (checker(s1, s2, a, b + 1, b));
-		}
-		else if (s2[b + 1] == s1[a]){
-			//printf("Pass 2\n");
-			return (checker(s1, s2, a, b + 1, b));
-		}	
-		else if (s1[a + 1] != s2[b + 1]){
-			//printf("Pass 3\n");
-			return (checker(s1, s2, a + 1, b, b));	
-		}
-		else if (s1[a + 1] == s2[b + 1]){
-			//printf("Pass 3\n");
-			return (checker(s1, s2, a + 1, b + 1, b));	
-		}
-		
-	}
-	else if ((s1[a] == s2[b]) || (s2[b] == '*' && s2[b + 1] == s1[a + 1])){
-		//printf("Pass 4\n");
-		return (checker(s1, s2, a + 1, b + 1, wildUsed));
-	}
-	else
-	{
-		if (wildUsed == -1)
-		{
-			//printf("No wild card\n");
-			return (0);
-		}
-		//printf("Back to wildcard\n");
-		return (checker(s1, s2, a, wildUsed, wildUsed));
-	}
-}
-if (s2[b] != '\0')
-	return 0;
-
-return (1);
-
+if ((start == end && pair != 0) || (start == end + 1 && pair == 0))
+	return (1);
+else if (s[start] != s[end])
+	return (0);
+else
+	return (check(s, start + 1, end - 1, pair));
 }
