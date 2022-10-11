@@ -1,1 +1,1 @@
-This directory contains exercises for C programming
+This directory contains code for typedef
